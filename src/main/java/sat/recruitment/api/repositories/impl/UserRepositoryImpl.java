@@ -50,7 +50,8 @@ public class UserRepositoryImpl implements UserRepository<User> {
         }
     }
 
-    private User convertToUser(String[] line) {
+    @Override
+    public User convertToUser(String[] line) {
         User user = new User();
         user.setName(line[0]);
         user.setEmail(line[1]);

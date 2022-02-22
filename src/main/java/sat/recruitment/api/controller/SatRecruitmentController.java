@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import sat.recruitment.api.models.User;
 import sat.recruitment.api.services.UserService;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -23,7 +24,7 @@ public class SatRecruitmentController {
 
     @PostMapping(value = "/create-user", consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(value = HttpStatus.CREATED)
-    public ResponseEntity<?> createUser(@RequestBody User messageBody) {
+    public ResponseEntity<?> createUser(@Valid @RequestBody User messageBody) {
 
         List<User> users = userService.readFile();
 

@@ -7,6 +7,9 @@ server:
 user:
   file:
     path: src/main/resources/users.txt
+  test:
+    file:
+      path: src/test/resources/users.txt
 
 info:
   app:
