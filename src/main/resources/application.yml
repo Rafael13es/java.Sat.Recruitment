@@ -1,6 +1,12 @@
 server.port: 8080
 server.error.include-message: ALWAYS
+server:
+  servlet:
+    context-path=: /api/v1
 
+user:
+  file:
+    path: src/main/resources/users.txt
 
 info:
   app:
